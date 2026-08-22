@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HubSpace - One Hub. Every Purpose.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <a class="navbar-brand" href="/">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HubSpace Logo" height="50" width="70">
+    </a>
+
+    <div class="ms-auto">
+      <a class="nav-link d-inline text-white" href="/">Home | </a>
+      <a class="nav-link d-inline text-white" href="/book">Book | </a>
+      <a class="nav-link d-inline text-white" href="/menu">Menu | </a>
+      <a class="nav-link d-inline text-white" href="/faq">FAQ | </a>
+      <a class="nav-link d-inline text-white" href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <!--Hero Section-->
+  <header class="hero-section d-flex align-items-center justify-content-center text-white text-center">
+    <div class="hero-text">
+      <h1 class="display-4 fw-bold">HubSpace</h1>
+      <p class="lead">One Hub. Every Purpose.</p>
+    </div>
+  </header>
+
+  <!--Game & Study Section-->
+  <section class="container-fluid px-0">
+    <div class="row text-center">
+      <div class="col-md-6 game-section d-flex align-items-center justify-content-center text-white">
+        <div>
+          <h3 class="section-heading">Play Games</h3>
+          <p class="section-subtext">State-of-the-art gaming PCs & Ambient environment</p>
+        </div>
+      </div>
+      <div class="col-md-6 study-section d-flex align-items-center justify-content-center text-white">
+        <div>
+          <h3 class="section-heading">Study & Productivity</h3>
+          <p class="section-subtext">Don't stress, do your best, forget the rest</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Hangout Section-->
+  <section class="hangout-section text-white text-center d-flex align-items-center justify-content-center">
+    <div>
+      <h3>Hangout With Friends</h3>
+      <p>Bring your squad. Book multiple adjacent spaces for fun or work.</p>
+    </div>
+  </section>
+
+  <!--Rules & Regulations Section-->
+  <section class="rules-section">
+    <div class="rules-box">
+      <h2 class="rules-title">Rules & Regulations</h2>
+      <ul class="rules-list">
+        <li>Respect your booking time — late arrival will not extend your session.</li>
+        <li>No food or drinks near the PCs to ensure equipment safety.</li>
+        <li>Maintain silence in Study & Research areas.</li>
+        <li>Gaming PCs are strictly for gaming during reserved sessions.</li>
+        <li>Damaged equipment will result in additional charges.</li>
+        <li>ID verification is mandatory upon entry.</li>
+        <li>Payment should be made during booking.</li>
+        <li>Any disruptive behavior may result in service termination.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!--Reviews-->
+  <section class="review-section d-flex align-items-center justify-content-center text-white text-center">
+    <div class="container">
+      <h3 class="section-heading mb-5">What People Are Saying?!</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="p-4">
+            <p class="review-text">"Best chill spot ever! Perfect for hanging out!"</p>
+            <p class="review-name">- Alex</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4">
+            <p class="review-text">"Perfect for late-night gaming."</p>
+            <p class="review-name">- Rina</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4">
+            <p class="review-text">"I study better here than home!"</p>
+            <p class="review-name">- Faisal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Book Now-->
+  <section class="booknow-section d-flex align-items-center justify-content-center text-center text-white">
+    <div>
+      <h3 class="section-heading">Ready to Join HubSpace?</h3>
+      <p class="section-subtext">Reserve your personal space now and experience the future of tech lounges.</p>
+      <a href="/book" class="btn btn-primary btn-lg mt-4 px-5 py-3">BOOK YOUR SPACE NOW!</a>
+    </div>
+  </section>
+
+  <!--Footer-->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>HubSpace • 123 Chill Lane • hubspace@gmail.com</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

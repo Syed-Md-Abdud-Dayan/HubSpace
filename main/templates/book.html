@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Reserve a PC</h2>
+    <!-- Use Flask's url_for for form action -->
+    <form action="{{ url_for('book_pc') }}" method="POST">
+      <div class="mb-3">
+        <label>Name:</label>
+        <input type="text" name="name" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label>Phone:</label>
+        <input type="text" name="phone" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label>Category:</label>
+        <select id="categorySelect" name="category" class="form-select" onchange="showConfig()" required>
+          <option value="">-- Select --</option>
+          <option value="gaming">Gaming</option>
+          <option value="studying">Studying</option>
+        </select>
+      </div>
+
+      <!-- PC Configuration Info Box -->
+      <div id="configBox" class="alert alert-info d-none">
+        <strong>PC Configuration:</strong>
+        <ul id="configList"></ul>
+      </div>
+
+      <!-- Number of People (Optional) -->
+      <div class="mb-3">
+        <label>Room for:</label>
+        <select class="form-select" name="people">
+          <option value="">-- Select --</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="4">4</option>
+          <option value="6">6</option>
+          <option value="8">8</option>
+        </select>
+      </div>
+
+      <!-- Duration -->
+      <div class="mb-3">
+        <label>Duration (in hours):</label>
+        <select class="form-select" name="hours" required>
+          <option value="1">1 Hour</option>
+          <option value="2">2 Hours</option>
+          <option value="3">3 Hours</option>
+          <option value="4">4 Hours</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label>Date:</label>
+        <input type="date" name="date" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label>Start Time:</label>
+        <input type="time" name="start_time" class="form-control" required>
+      </div>
+
+      <button class="btn btn-success" type="submit">Book Now</button>
+    </form>
+  </div>
+
+  <!-- JS to Show PC Config -->
+  <script>
+    function showConfig() {
+      const category = document.getElementById("categorySelect").value;
+      const configBox = document.getElementById("configBox");
+      const configList = document.getElementById("configList");
+
+      const gamingSpecs = [
+        "Intel Core i9 or AMD Ryzen 9",
+        "32 GB RAM",
+        "NVIDIA RTX 4070 GPU",
+        "144Hz Gaming Monitor",
+        "Mechanical RGB Keyboard"
+      ];
+
+      const studySpecs = [
+        "Intel Core i5 or AMD Ryzen 5",
+        "8 GB RAM",
+        "Integrated Graphics",
+        "1080p LED Monitor",
+        "Standard Keyboard and Mouse"
+      ];
+
+      if (category === "gaming") {
+        configList.innerHTML = gamingSpecs.map(item => `<li>${item}</li>`).join('');
+        configBox.classList.remove("d-none");
+      } else if (category === "studying") {
+        configList.innerHTML = studySpecs.map(item => `<li>${item}</li>`).join('');
+        configBox.classList.remove("d-none");
+      } else {
+        configBox.classList.add("d-none");
+        configList.innerHTML = '';
+      }
+    }
+  </script>
+</body>
+</html>
