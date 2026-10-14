@@ -105,4 +105,4 @@ This project was built for learning/demo purposes. Before using it in production
 
 ## License
 
-This project is not licensed for reuse. All rights reserved — please do not copy, modify, or redistribute this code without permission.
+All rights reserved. This project is not licensed for reuse — please do not copy, modify, or redistribute this code without permission. See [LICENSE.md](LICENSE.md) for details.
