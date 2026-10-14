@@ -1,6 +1,6 @@
 # License
 
-Copyright (c) 2026 [Your Full Name]. All rights reserved.
+Copyright (c) 2026 Syed Mohammad Abdud Dayan. All rights reserved.
 
 This software and its associated files (the "Software"), including all source code, database schemas, templates, stylesheets, and documentation, are the exclusive property of the copyright holder.
 
